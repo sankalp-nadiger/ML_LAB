@@ -4,7 +4,6 @@ from sklearn.neighbors import KNeighborsClassifier as KNN
 
 glass_data=pd.read_csv("glass.csv")
 
-datasets=['Glass','Fruit']
 Xg = glass_data.drop('Type',axis=1).values
 yg = glass_data['Type'].values
 
@@ -18,6 +17,7 @@ for p,distance_metric in enumerate(distance_metrics):
             accuracy=knn.score(X_test,y_test)
             print(f"accuracy on test set: {accuracy:.2f}")
             print("------------")
+
 
 
 
