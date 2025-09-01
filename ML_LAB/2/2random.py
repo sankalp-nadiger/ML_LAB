@@ -29,8 +29,9 @@ plt.title("Contour Plot")
 plt.show()
 
 
-fig = plt.figure()
+#3d surface plot
 ax = plt.axes(projection='3d')
 ax.plot_trisurf(X, Y, Z, cmap='jet')
 ax.set_title("3D Surface Plot")
 plt.show()
+
