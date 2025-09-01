@@ -13,13 +13,11 @@ distance_metrics= ['manhattan','euclidean']
 for p,distance_metric in enumerate(distance_metrics):
             print(f"Distance Metric={distance_metric}: ")
             knn=KNN(n_neighbors=3,p=p+1,weights="distance")
-            if dataset == 'Glass':
-                    X_train,X_test, y_train,y_test=train_test_split(Xg,yg,test_size=0.3,random_state=42)
-            else:
-                    X_train,X_test, y_train,y_test=train_test_split(Xf,yf,test_size=0.3,random_state=42)
+            X_train,X_test, y_train,y_test=train_test_split(Xg,yg,test_size=0.3,random_state=42)
             knn.fit(X_train,y_train)
             accuracy=knn.score(X_test,y_test)
             print(f"accuracy on test set: {accuracy:.2f}")
             print("------------")
+
 
 
